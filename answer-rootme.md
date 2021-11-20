@@ -8,3 +8,9 @@ JS Auth : https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Authentifi
 JS Auth 2 : https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Authentification-2 même principe que JS Auth, seulement dans le fichier .js on peut voir la variable contenant les accès.
 
 JS Source : https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Source même principe que JS Auth, seulement le script est directement mis entre balise script
+
+JS Obfuscation : https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-1 le pass est définis, le script nous dis `if h == unescape(pass))`, il suffit donc d'aller en console, entrer `pass = '%63%70%61%73%62%69%65%6e%64%75%72%70%61%73%73%77%6f%72%64';` suivis de `unescape(pass)`.
+
+JS Obfuscation 2 : https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-2 la variable pass est définis comme `var pass = unescape("unescape%28%22String.fromCharCode%2528104%252C68%252C117%252C102%252C106%252C100%252C107%252C105%252C49%252C53%252C54%2529%22%29");`, il faut donc `unescape(pass)`, puis faire un `unescape` en enlevant les guillements de la string, ce qui permet d'avoir le mot de passe.
+
+JS Native Code : https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Native-code On peut voir qu'en copiant le code dans la console on a une pop-up nous demandant le mot de passe, en rentrant le code sur https://www.dcode.fr/desobfuscateur-javascript le résultat a été donné. Une autre solution aurait été d'ajouté `toString()` à la fin du code en remplaçant les deux dernières parenthèses.
